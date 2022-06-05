@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/astar-pathfinding-challenge/static/js/main.8590a127.js",
+    "static/js/787.f0962bd6.chunk.js": "/astar-pathfinding-challenge/static/js/787.f0962bd6.chunk.js",
+    "index.html": "/astar-pathfinding-challenge/index.html",
+    "main.8590a127.js.map": "/astar-pathfinding-challenge/static/js/main.8590a127.js.map",
+    "787.f0962bd6.chunk.js.map": "/astar-pathfinding-challenge/static/js/787.f0962bd6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.8590a127.js"
+  ]
+}
