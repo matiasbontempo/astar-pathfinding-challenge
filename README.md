@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# A* Pathfinding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I gave myself 4 hours to complete this challenge. The objective was to create a
+pathfinding algorithm that can find the shortest path between two points in a
+grid.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+- React
+- ESLint
+- TypeScript
+- StyledComponents
 
-### `npm start`
+## Thought Process
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To be honest, I would not use React for this kind of challenge. I would just
+use a plain old HTML/CSS/JS with a Snowpack setup for the development
+environment and to build the static files for the production environment.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+My first thought was to use the [A* algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm)
+to find the shortest path. I've never coded it before, but I've used it and
+read about it's implementation. I considered using one of the available npm
+packages for this, but I decided to write my own.
 
-### `npm test`
+Before working on the components, and knowing about the time limit, I decided
+to start by algorithm implementation. I used the Wikipedia article as my main
+reference, but I also used two videos I've watched before: [Computerphile - A* (A Star) Search Algorithm](https://www.youtube.com/watch?v=ySN5Wnu88nE)
+and [Daniel Shiffman - Coding Challenge 51.1: A* Pathfinding Algorithm](https://www.youtube.com/watch?v=aKYlikFAV4k).
+This implementation took most of the time I had to complete the challenge.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once it was working, I started building the basic components. The main
+component is the App component, which holds the maze reference, the solution,
+and the solver. Once I was able to render a basic maze using numbers to
+represent the maze state (walls, open spaces, solution, and the start and end
+points), I started working on the UI elements: Maze, and Tile.
 
-### `npm run build`
+Finally, as I had some minutes left before writting this README, I decided to
+add a basic interaction with the maze. Every tile has a click event, which will
+toggle the tile's state between open and wall. This also triggers the solver to
+find the shortest path again.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Running the repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Just do the old `npm install` and `npm start`.
